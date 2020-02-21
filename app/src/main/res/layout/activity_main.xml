@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="27dp"
+        android:text="speed controller"
+        app:layout_constraintBottom_toTopOf="@+id/Light"
+        app:layout_constraintHorizontal_bias="0.543"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="202dp"
+        android:text="ToggleButton"
+        app:layout_constraintEnd_toStartOf="@+id/Light"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/Light"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        android:text="LIGHTS"
+        app:layout_constraintBottom_toTopOf="@+id/load"
+        tools:layout_editor_absoluteX="354dp" />
+
+    <SeekBar
+        android:id="@+id/load"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="340dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="63dp"
+        android:max="10"
+        android:progress="3"
+        app:layout_constraintBottom_toTopOf="@+id/van"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Light"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/van"
+        android:layout_width="167dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="66dp"
+        android:layout_marginBottom="452dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/load"
+        app:srcCompat="@drawable/b" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
